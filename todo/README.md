@@ -38,25 +38,21 @@ You are building an application to manage developer time.  This application will
 Start by writing out the following (before writing any code):
 
 * Your data structure diagram.  - https://www.lucidchart.com/invitations/accept/8dcda379-a228-400f-8b57-d58a7c6a48fb
-* A list of all controllers and actions which your application will have. -
-
-controllers:
-
-  Developers:
-  list/create/edit/delete/login/logout
-  Entries:
-  list/create/edit/delete
-  Projects:
-  list/create/edit/delete
-
-
-* Your best guess at a list of things to test.  Try to be complete.  This is not standard practice, but will encourage TDD once you get started.
-
--noted under each phase
+* A list of all controllers and actions which your application will have. (- see below this section)
+* Your best guess at a list of things to test.  Try to be complete.  This is not standard practice, but will encourage TDD once you get started. ()-noted under each phase)
 
 The requirements are presented below in a particular order.  You MUST complete each one of these phases in order, without jumping around.  Each completed phase must have tests in place, a README in place, a series of good commit messages, and a final commit message (for that particular phase) which includes the `#shipit` tag.
 
 Record the number of hours you put towards each of the phases, and email or message your instructor when you complete each phase.
+
+#controllers:
+
+  * Developers:
+  * list/create/edit/delete/login/logout
+  * Entries:
+  * list/create/edit/delete
+  * Projects:
+  * list/create/edit/delete
 
 ### Phase One
 
