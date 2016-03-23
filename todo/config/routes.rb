@@ -3,9 +3,19 @@ Rails.application.routes.draw do
 
 # get 'developers/index'
 
-root 'developers#index'
-resources :developers
-resources :entries
+  root 'developers#index'
+  resources :developers
+  resources :entries
+
+  get 'sessions/login'
+  post 'sessions/login'
+
+  get 'sessions/signup'
+  post 'sessions/signup'
+
+  get 'sessions/logout'
+  post 'sessions/logout'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
