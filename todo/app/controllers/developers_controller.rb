@@ -39,12 +39,7 @@ class DevelopersController < ApplicationController
 
   def destroy
     @developer.destroy
-
-    if @developer.destroy
      redirect_to developers_path
-    else
-     redirect_to developers_path
-    end
   end
 
 

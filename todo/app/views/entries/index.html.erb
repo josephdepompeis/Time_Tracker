@@ -1,0 +1,36 @@
+Hi!
+
+<%= @entries %>
+
+
+<table>
+  <thead>
+    <tr>
+      <th>id</th>
+      <th>developer id</th>
+      <th>date</th>
+      <th>project id</th>
+      <th>duration</th>
+
+      <th colspan="8"></th>
+    </tr>
+  </thead>
+
+  <tbody >
+    <% @entries.each do |entry| %>
+      <tr>
+        <td class=""><%= entry.id %></td>
+        <td class=""><%= entry.developer_id %></td>
+        <td class=""><%= entry.date %></td>
+        <td class=""><%= entry.project_id %></td>
+        <td class=""><%= entry.duration %></td>
+        <td><%= link_to 'Edit', edit_entry_path(entry) %></td>
+        <td><%= link_to 'Destroy', entry, method: :delete %></td>
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+<%= link_to 'NEW', new_entry_path %>

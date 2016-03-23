@@ -2,11 +2,26 @@ EDIT SUCCESS
 
 
 <p>
-  <strong>Name:</strong>
+  <strong>First:</strong>
   <%= @developer.first %>
 </p>
 
 <p>
-  <strong>Password:</strong>
+  <strong>Last:</strong>
   <%= @developer.last %>
 </p>
+
+
+<p>
+  <strong>Email:</strong>
+  <%= @developer.email %>
+</p>
+
+
+<p>
+  <strong>Password:</strong>
+  <%= @developer.password_digest %>
+</p>
+
+
+<%= link_to 'INDEX PAGE', developers_path %>

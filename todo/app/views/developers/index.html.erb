@@ -10,16 +10,19 @@ Hi!
       <th>last</th>
       <th>email</th>
       <th>password</th>
-      <th colspan="4"></th>
+      <th colspan="8"></th>
     </tr>
   </thead>
 
   <tbody >
     <% @developers.each do |developer| %>
       <tr>
-        <td class="my-surveys-survey"><%= developer.first %></td>
-        <td class="my-surveys-survey"><%= developer.last %></td>
-        <td class="my-surveys-survey"><%= developer.email %></td>
+        <td class=""><%= developer.first %></td>
+        <td class=""><%= developer.last %></td>
+        <td class=""><%= developer.email %></td>
+        <td class=""><%= developer.password_digest %></td>
+
+
         <td><%= link_to 'Edit', edit_developer_path(developer) %></td>
         <td><%= link_to 'Destroy', developer, method: :delete %></td>
 
