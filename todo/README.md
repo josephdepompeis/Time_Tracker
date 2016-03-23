@@ -54,7 +54,7 @@ Record the number of hours you put towards each of the phases, and email or mess
   * Projects:
   * list/create/edit/delete
 
-### Phase One
+### Phase One - 3.5 hours of coding, about 2 hours of planning, with ERD and everything.
 
 * Anyone can list/create/edit/delete developers.
 * Developers must have unique email addresses.
@@ -66,9 +66,10 @@ Record the number of hours you put towards each of the phases, and email or mess
 * The application should have a root route.
 
 ##Phase One Tests
-* test views for all possible views
-* test valid email
+* test valid unique email
 * create time entry, validate duration, developer, and date
+* create entry/developer
+
 
 ### Phase Two
 

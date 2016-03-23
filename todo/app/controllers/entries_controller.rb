@@ -13,7 +13,7 @@ end
   def create
     @entry = Entry.new(entry_params)
     if @entry.save
-        redirect_to @entry
+      redirect_to @entry
     else
       render :new
     end
@@ -24,7 +24,7 @@ end
 
   def update
     if @entry.update(entry_params)
-            redirect_to @entry
+      redirect_to @entry
     else
       render :edit
     end
