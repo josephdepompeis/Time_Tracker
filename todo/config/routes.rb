@@ -2,6 +2,8 @@ Rails.application.routes.draw do
 
 
 # get 'developers/index'
+
+root 'developers#index'
 resources :developers
 resources :entries
   # The priority is based upon order of creation: first created -> highest priority.

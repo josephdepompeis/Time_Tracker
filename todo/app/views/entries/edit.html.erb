@@ -1,4 +1,4 @@
-new stuff here!
+EDIT stuff here!
 <%= form_for(@entry) do |f| %>
   <% if @entry.errors.any? %>
     <div id="error_explanation">
@@ -13,7 +13,7 @@ new stuff here!
 
   <div class="field">
     <%= f.label :developer_id %><br>
-    <%= f.text_field :developer_id %>
+    <%= f.select :developer_id, Developer.all.collect {|s| [ s.email, s.id ] } %>
   </div>
   <div class="field">
     <%= f.label :date %><br>
@@ -34,3 +34,10 @@ new stuff here!
     <%= f.submit %>
   </div>
 <% end %>
+
+
+
+
+<%= link_to 'entries', entries_path %>
+
+<%= link_to 'developer index', developers_path %>

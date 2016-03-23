@@ -13,7 +13,7 @@ new stuff here!
 
   <div class="field">
     <%= f.label :developer_id %><br>
-    <%= f.text_field :developer_id %>
+    <%= f.select :developer_id, Developer.all.collect {|s| [ s.email, s.id ] } %>
   </div>
   <div class="field">
     <%= f.label :date %><br>
@@ -34,3 +34,9 @@ new stuff here!
     <%= f.submit %>
   </div>
 <% end %>
+
+
+
+<%= link_to 'entries index', entries_path %>
+
+<%= link_to 'developer index', developers_path %>
