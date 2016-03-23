@@ -1,5 +1,6 @@
 class EntriesController < ApplicationController
   before_action :set_entry, only: [:edit, :update, :show, :destroy]
+  before_action :logged_in?
 
 def index
   @entries = Entry.all

@@ -1,5 +1,7 @@
 class DevelopersController < ApplicationController
   before_action :set_developer, only: [:edit, :update, :show, :destroy]
+  before_action :logged_in?
+  skip_before_action :logged_in?, only: [:new, :create]
 
   def index
     @developers = Developer.all

@@ -22,8 +22,5 @@ class SessionsController < ApplicationController
     session[:developer_id] = nil
     redirect_to sessions_login_path
   end
-
-  def signup
-
-  end
+  
 end
