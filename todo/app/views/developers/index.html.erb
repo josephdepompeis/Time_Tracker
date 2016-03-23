@@ -1,0 +1,32 @@
+Hi!
+
+<%= @developer %>
+
+
+<table>
+  <thead>
+    <tr>
+      <th>first</th>
+      <th>last</th>
+      <th>email</th>
+      <th>password</th>
+      <th colspan="4"></th>
+    </tr>
+  </thead>
+
+  <tbody >
+    <% @developers.each do |developer| %>
+      <tr>
+        <td class="my-surveys-survey"><%= developer.first %></td>
+        <td class="my-surveys-survey"><%= developer.last %></td>
+        <td class="my-surveys-survey"><%= developer.email %></td>
+        <td><%= link_to 'Edit', edit_developer_path(developer) %></td>
+        <td><%= link_to 'Destroy', developer, method: :delete %></td>
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+<%= link_to 'NEW', new_developer_path %>

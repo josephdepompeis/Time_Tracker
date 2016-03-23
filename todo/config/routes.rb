@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+
+
+# get 'developers/index'
+resources :developers
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
