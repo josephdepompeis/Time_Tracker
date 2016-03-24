@@ -11,8 +11,9 @@ class DevelopersController < ApplicationController
   end
 
   def update
+
     if @developer.update(developer_params)
-            redirect_to @developer
+      redirect_to @developer
     else
       render :edit
     end
@@ -29,12 +30,13 @@ class DevelopersController < ApplicationController
 
 
   def create
-      @developer = Developer.new(developer_params)
-      if @developer.save
-          redirect_to @developer
-      else
-        render :new
-      end
+    @developer = Developer.new(developer_params)
+    if @developer.save
+        redirect_to @developer
+    else
+      render :new
+    end
+
   end
 
 
@@ -50,15 +52,10 @@ class DevelopersController < ApplicationController
       @developer = Developer.find(params[:id])
     end
 
+
+
     def developer_params
       params.require(:developer).permit(:first, :last, :email, :password)
     end
-
-
-
-#
-#
-# Anyone can list/create/edit/delete developers.
-
 
 end

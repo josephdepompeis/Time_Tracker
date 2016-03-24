@@ -12,8 +12,8 @@ EDIT stuff here!
   <% end %>
 
   <div class="field">
-    <%= f.label :developer_id %><br>
-    <%= f.select :developer_id, Developer.all.collect {|s| [ s.email, s.id ] } %>
+    <% f.label :developer_id %><br>
+    <% f.select :developer_id, :developer_id => session[:developer_id] %>
   </div>
   <div class="field">
     <%= f.label :date %><br>
