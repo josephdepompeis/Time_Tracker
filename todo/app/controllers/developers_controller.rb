@@ -48,14 +48,14 @@ class DevelopersController < ApplicationController
 
 
   private
-    def set_developer
-      @developer = Developer.find(params[:id])
-    end
+  def set_developer
+    @developer = Developer.find(params[:id])
+  end
 
 
 
-    def developer_params
-      params.require(:developer).permit(:first, :last, :email, :password)
-    end
+  def developer_params
+    params.require(:developer).permit(:first, :last, :email, :password)
+  end
 
 end

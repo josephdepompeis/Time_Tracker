@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   root 'developers#index'
   resources :developers
   resources :entries
+  resources :projects
 
   get 'sessions/login'
   post 'sessions/login'

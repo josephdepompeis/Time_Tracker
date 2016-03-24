@@ -1,0 +1,45 @@
+Hi!
+
+<%= @projects %>
+
+
+<table>
+  <thead>
+    <tr>
+      <th>id</th>
+      <th>developer id</th>
+      <th>date</th>
+      <th>project id</th>
+      <th>duration</th>
+
+      <th colspan="8"></th>
+    </tr>
+  </thead>
+
+  <tbody >
+    <% @projects.each do |project| %>
+      <tr>
+        <td class=""><%= project.id %></td>
+        <td class=""><%= project.max_time_spent %></td>
+        <td class=""><%= project.description %></td>
+        <td class=""><%= project.created_at %></td>
+        <td class=""><%= project.updated_at %></td>
+        <td><%= link_to 'Edit', edit_project_path(project) %></td>
+        <td><%= link_to 'Destroy', project, method: :delete %></td>
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+<%= link_to 'new project', new_project_path %>
+<%= link_to 'project index', projects_path %>
+
+<br>
+<%= link_to 'NEW', new_entry_path %>
+<%= link_to 'entry index', entries_path %>
+<br>
+
+<%= link_to 'NEW DEVELOPER', new_developer_path %>
+<%= link_to 'developer index', developers_path %>

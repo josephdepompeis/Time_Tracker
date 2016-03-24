@@ -3,6 +3,6 @@ class Entry < ActiveRecord::Base
   validates :developer_id, presence: true
   validates :date, presence: true
 
-
+  belongs_to :project
   belongs_to :developer
 end
