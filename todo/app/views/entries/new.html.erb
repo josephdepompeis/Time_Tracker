@@ -12,16 +12,19 @@ new stuff here!
   <% end %>
 
   <div class="field">
-    <% f.label :developer_id %><br>
-    <% f.select :developer_id, :developer_id => session[:developer_id] %>
+    <%= f.label :developer_id %><br>
+    <%= f.select :developer_id, Developer.where(id: session["developer_id"]) {|s| [ s.email, s.id ] } %>
+  <div>
+
+  <div class="field">
+    <%= f.label :project_id %><br>
+    <%= f.select :project_id, Project.all.collect {|s| [ s.description, s.id ] } %>
   </div>
+
+
   <div class="field">
     <%= f.label :date %><br>
     <%= f.date_field :date %>
-  </div>
-  <div class="field">
-    <%= f.label :project_id %><br>
-    <%= f.text_field :project_id %>
   </div>
 
   <div class="field">
@@ -37,6 +40,7 @@ new stuff here!
 
 
 
-<%= link_to 'entries index', entries_path %>
+
+<%= link_to 'entries', entries_path %>
 
 <%= link_to 'developer index', developers_path %>

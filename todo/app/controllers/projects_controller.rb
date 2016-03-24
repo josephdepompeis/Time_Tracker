@@ -19,9 +19,9 @@ class ProjectsController < ApplicationController
     end
   end
 
-
-
   def destroy
+    @project.destroy
+     redirect_to developers_path
   end
 
   def new
