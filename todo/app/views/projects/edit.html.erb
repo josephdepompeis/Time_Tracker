@@ -4,7 +4,7 @@ edit stuff here!
     <div id="error_explanation">
       <h2><%= pluralize(@project.errors.count, "error") %> prohibited this entry from being saved:</h2>
       <ul>
-      <% @entry.errors.full_messages.each do |message| %>
+      <% @project.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>

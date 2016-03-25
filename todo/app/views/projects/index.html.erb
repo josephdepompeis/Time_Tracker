@@ -11,6 +11,7 @@ Hi!
       <th>description</th>
       <th>created_at</th>
       <th>updated_at</th>
+        <th>project_total_hours</th>
       <th colspan="10"></th>
     </tr>
   </thead>
@@ -18,13 +19,23 @@ Hi!
   <tbody >
     <% @projects.each do |project| %>
       <tr>
-        <td class=""><%= project.id %></td>
+      <% if project.max_time_spent < project.project_total_hours %>
+        <td class="" style="background-color: red;font-weight:bold " ><%= project.id %></td>
+        <td class="" style="background-color: red;font-weight:bold " ><%= project.max_time_spent %></td>
+        <td class="" style="background-color: red;font-weight:bold " ><%= project.description %></td>
+        <td class="" style="background-color: red;font-weight:bold " ><%= project.created_at %></td>
+        <td class="" style="background-color: red;font-weight:bold " ><%= project.updated_at %></td>
+        <td class="" style="background-color: red;font-weight:bold " ><%= project.project_total_hours %></td>
+      <% else %>
+        <td class="" ><%= project.id %></td>
         <td class=""><%= project.max_time_spent %></td>
         <td class=""><%= project.description %></td>
         <td class=""><%= project.created_at %></td>
         <td class=""><%= project.updated_at %></td>
-        <td><%= link_to 'Edit', edit_project_path(project) %></td>
-        <td><%= link_to 'Destroy', project, method: :delete %></td>
+        <td class=""><%= project.project_total_hours %></td>
+      <% end %>
+      <td><%= link_to 'Edit', edit_project_path(project) %></td>
+      <td><%= link_to 'Destroy', project, method: :delete %></td>
       </tr>
     <% end %>
   </tbody>

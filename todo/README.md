@@ -71,14 +71,14 @@ Record the number of hours you put towards each of the phases, and email or mess
 * create entry/developer
 
 
-### Phase Two
+### Phase Two - 1.50 hours to complete.
 
 * Developers can log in.
 * Developers can log out from any page.
 * Anyone who tries to access any page without logging in is redirected to the login page.
 * The application should have a root route which is NOT the login page.
 
-### Phase Three
+### Phase Three - 1.50 hours
 
 * Developers can only create time entries for themselves.
 * Developers can see a list of just their own time entries.

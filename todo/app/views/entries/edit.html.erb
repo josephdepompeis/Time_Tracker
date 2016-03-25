@@ -13,7 +13,7 @@ edit stuff here!
 
   <div class="field">
     <%= f.label :developer_id %><br>
-    <%= f.select :developer_id, Developer.where(id: session["developer_id"]) {|s| [ s.email, s.id ] } %>
+    <%= f.select :developer_id, Developer.all.collect {|s| [ s.email, s.id ] } %>
   <div>
 
   <div class="field">

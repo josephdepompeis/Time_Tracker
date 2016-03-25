@@ -3,7 +3,7 @@ class EntriesController < ApplicationController
   before_action :logged_in?
 
 def index
-  # @entries = Entry.all
+  @entries = Entry.all
   @entries = Entry.where(developer_id: session["developer_id"])
 
 end
@@ -11,6 +11,7 @@ end
 
   def new
     @entry = Entry.new
+        @dev_id = session[:developer_id]
   end
 
   def create
