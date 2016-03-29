@@ -1,8 +1,4 @@
-Hi!
-
 <%= @developer %>
-
-
 <table>
   <thead>
     <tr>
@@ -16,18 +12,24 @@ Hi!
 
   <tbody >
     <% @developers.each do |developer| %>
-      <tr>
-        <td class=""><%= developer.first %></td>
-        <td class=""><%= developer.last %></td>
-        <td class=""><%= developer.email %></td>
-        <td class=""><%= developer.password_digest %></td>
-        <td><%= link_to 'Edit', edit_developer_path(developer) %></td>
-        <% if developer.entries.length > 0  %>
-        <% else %>
-        <td><%= link_to 'Destroy', developer, method: :delete %></td>
-        <% end %>
-
-      </tr>
+    <tr>
+    <% if developer.seven_day > 40 %>
+      <td class="" style="background-color: red;font-weight:bold "><%= developer.first %></td>
+      <td class="" style="background-color: red;font-weight:bold "><%= developer.last %></td>
+      <td class="" style="background-color: red;font-weight:bold "><%= developer.email %></td>
+      <td class="" style="background-color: red;font-weight:bold "><%= developer.password_digest %></td>
+    <% else %>
+      <td class=""><%= developer.first %></td>
+      <td class=""><%= developer.last %></td>
+      <td class=""><%= developer.email %></td>
+      <td class=""><%= developer.password_digest %></td>
+    <% end %>
+    <td><%= link_to 'Edit', edit_developer_path(developer) %></td>
+    <% if developer.entries.length > 0  %>
+    <% else %>
+      <td><%= link_to 'Destroy', developer, method: :delete %></td>
+    <% end %>
+    </tr>
     <% end %>
   </tbody>
 </table>

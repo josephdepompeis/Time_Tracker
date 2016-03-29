@@ -13,14 +13,14 @@ new stuff here!
 
   <div class="field">
     <%= f.label :developer_id %><br>
-    <%= f.select :developer_id, Developer.all.collect {|s| [ s.email, s.id ] }, :selected => session[:developer_id], disabled: true %>
+    <%= f.collection_select :developer_id, Developer.where(id: session[:developer_id]), :id, :email %>
+
   <div>
 
   <div class="field">
     <%= f.label :project_id %><br>
     <%= f.select :project_id, Project.all.collect {|s| [ s.description, s.id ] } %>
   </div>
-
 
   <div class="field">
     <%= f.label :date %><br>
