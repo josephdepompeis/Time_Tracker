@@ -35,7 +35,10 @@ Hi!
         <td class=""><%= project.project_total_hours %></td>
       <% end %>
       <td><%= link_to 'Edit', edit_project_path(project) %></td>
-      <td><%= link_to 'Destroy', project, method: :delete %></td>
+      <% if project.entries.length > 0  %>
+      <% else %>
+        <td><%= link_to 'Destroy', project, method: :delete %></td>
+      <% end %>
       </tr>
     <% end %>
   </tbody>

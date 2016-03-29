@@ -13,7 +13,7 @@ new stuff here!
 
   <div class="field">
     <%= f.label :developer_id %><br>
-    <%= f.select :developer_id, Developer.all.collect {|s| [ s.email, s.id ] } %>
+    <%= f.select :developer_id, Developer.all.collect {|s| [ s.email, s.id ] }, :selected => session[:developer_id], disabled: true %>
   <div>
 
   <div class="field">

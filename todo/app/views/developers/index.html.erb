@@ -21,10 +21,11 @@ Hi!
         <td class=""><%= developer.last %></td>
         <td class=""><%= developer.email %></td>
         <td class=""><%= developer.password_digest %></td>
-
-
         <td><%= link_to 'Edit', edit_developer_path(developer) %></td>
+        <% if developer.entries.length > 0  %>
+        <% else %>
         <td><%= link_to 'Destroy', developer, method: :delete %></td>
+        <% end %>
 
       </tr>
     <% end %>
