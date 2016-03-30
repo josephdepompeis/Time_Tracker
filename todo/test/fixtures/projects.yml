@@ -7,3 +7,7 @@ one:
 two:
   max_time_spent: 1
   description: MyString
+
+three:
+  max_time_spent: 15
+  description: Test Data

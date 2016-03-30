@@ -5,3 +5,6 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+developer1 = Developer.create!({first: 'Joseph', last: 'Jones', email: 'login@login.com', password: 'password'})
+project1 = Project.create!({max_time_spent: 20, description: 'test project!'})
+entries1 = Entry.create!({developer_id: developer1.id, date: Date.current, project_id: project1.id, duration: 10 })

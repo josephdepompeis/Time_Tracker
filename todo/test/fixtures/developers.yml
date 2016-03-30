@@ -11,3 +11,9 @@ two:
   last: MyString
   email: MyString
   password_digest: MyString
+
+three:
+  first: Joseph
+  last: Smith
+  email: login@login.com
+  password_digest: <%= BCrypt::Password.create("password") %>

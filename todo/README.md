@@ -84,7 +84,7 @@ Record the number of hours you put towards each of the phases, and email or mess
 * Developers can see a list of just their own time entries.
 * Developers can edit/delete just their own time entries.
 
-### Phase Four
+### Phase Four - 2 hours
 
 * Developers can list/create/edit/delete projects.
 * Projects must have a maximum number of allowed hours.
@@ -94,14 +94,14 @@ Record the number of hours you put towards each of the phases, and email or mess
   * Includes a total number of hours worked on each project.
   * Shows the project in red if the total number of hours on the project exceeds the number of hours allowed.
 
-### Phase Five
+### Phase Five - 1 hour
 
 * No one can delete a developer once that developer has made a time entry.
 * No one can delete a project once that project has a time entry on it.
 * Modify the developer list page to:
   * Show the developer in red if he or she has worked more than 40 hours in the current calendar week.
 
-### Bonus Phase
+### Bonus Phase - didn't do.
 
 * Allow developers to create a time entry by choosing to start work at one point in time, then to end work by coming back to the application later and hitting a simple "End Current Task" button.
 * Work in progress should not be counted towards the total for projects or developers.  It should count as soon as the "End Current Task" button is hit.

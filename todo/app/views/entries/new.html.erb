@@ -14,7 +14,6 @@ new stuff here!
   <div class="field">
     <%= f.label :developer_id %><br>
     <%= f.collection_select :developer_id, Developer.where(id: session[:developer_id]), :id, :email %>
-
   <div>
 
   <div class="field">
